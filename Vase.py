@@ -6,7 +6,7 @@ def draw_Vase(vase,farbe):
     for i in range(len(vase)-1):
         #print koord_vase[i]#, *koord_vase[i+1]
         c.stroke(path.line(vase[i][0], vase[i][1],
-            vase[i+1][0],vase[i+1][1]),[style.linewidth(0.001),farbe])
+            vase[i+1][0],vase[i+1][1]),[style.linewidth(0.01),farbe])
 
 def vase_evolution(vase_eins, N):
 
@@ -74,10 +74,10 @@ if __name__ == "__main__":
 
 
 
-    vase_mase = vasen_evolution(koord_vase, 6)
+    vase_mase = vase_evolution(koord_vase, 5)
     draw_Vase(vase_mase, color.rgb.blue)
     #zeichne_Vase(koord_vase, color.rgb.green)
 
-    c.writePDFfile()
+    c.writePDFfile('Vase,N = 5')
 
 

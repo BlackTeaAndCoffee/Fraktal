@@ -64,6 +64,8 @@ def vase_evolution(vase_eins, N):
 
 
 if __name__ == "__main__":
+    N = 5
+
     c = canvas.canvas()
 
     koord_vase = [[0,0], [1,0], [1,-1], [2,-1], [2,0], [3,0] ]
@@ -74,10 +76,10 @@ if __name__ == "__main__":
 
 
 
-    vase_mase = vase_evolution(koord_vase, 5)
+    vase_mase = vase_evolution(koord_vase, N)
     draw_Vase(vase_mase, color.rgb.blue)
     #zeichne_Vase(koord_vase, color.rgb.green)
 
-    c.writePDFfile('Vase,N = 5')
+    c.writePDFfile('Vase,N=%d' %(N))
 
 
